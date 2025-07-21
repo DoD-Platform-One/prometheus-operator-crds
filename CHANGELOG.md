@@ -4,8 +4,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
-## [0.0.0-bb.0] - YYYY-MM-DD
+## [21.0.0-bb.0] - 2025-07-17
 
-### Changetype (<https://keepachangelog.com/en/1.0.0/#how>)
+### Added
 
-- Brief description of changes
+- Initial prometheus-operator-crds chart build out
+- Set upstream chart dependency and alias
