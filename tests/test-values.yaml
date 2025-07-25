@@ -1,11 +1,38 @@
-packages:
-  prometheus-operator-crds:
-    namespace:
-      name: monitoring
-    helmRelease:
-      namespace: "bigbang"
-    enabled: true
-    sourceType: "git"
-    git:
-      repo: https://repo1.dso.mil/big-bang/apps/sandbox/prometheus-operator-crds.git
-      tag: null
+#########################
+# Disable Core Packages #
+#########################
+bbctl:
+  enabled: false
+grafana:
+  enabled: false
+neuvector:
+  enabled: false
+loki:
+  enabled: false
+promtail:
+  enabled: false
+tempo:
+  enabled: false
+kyvernoReporter:
+  enabled: false
+kiali:
+  enabled: false
+gatekeeper:
+  enabled: false
+alloy:
+  enabled: false
+addons:
+  minioOperator:
+    enabled: false
+########################
+# Required for package #
+########################
+prometheusOperatorCRDs:
+  enabled: true
+monitoring:
+  enabled: true
+  values:
+    crds:
+      enabled: false
+    bbtests:
+      enabled: true
