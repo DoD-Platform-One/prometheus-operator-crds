@@ -36,3 +36,7 @@ monitoring:
       enabled: false
     bbtests:
       enabled: true
+kyverno:
+  enabled: true
+kyvernoPolicies:
+  enabled: true

@@ -20,6 +20,12 @@ istioGateway:
 networkPolicies:
   enabled: true
 
+kyverno:
+  enabled: true
+
+kyvernoPolicies:
+  enabled: true
+
 monitoring:
   enabled: true
   values:
