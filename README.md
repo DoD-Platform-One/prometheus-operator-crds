@@ -1,7 +1,7 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # prometheus-operator-crds
 
-![Version: 22.0.1-bb.0](https://img.shields.io/badge/Version-22.0.1--bb.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.84.0](https://img.shields.io/badge/AppVersion-v0.84.0-informational?style=flat-square) ![Maintenance Track: bb_sandbox](https://img.shields.io/badge/Maintenance_Track-bb_sandbox-red?style=flat-square)
+![Version: 23.0.0-bb.0](https://img.shields.io/badge/Version-23.0.0--bb.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.85.0](https://img.shields.io/badge/AppVersion-v0.85.0-informational?style=flat-square) ![Maintenance Track: bb_sandbox](https://img.shields.io/badge/Maintenance_Track-bb_sandbox-red?style=flat-square)
 
 A Helm chart that collects custom resource definitions (CRDs) from the Prometheus Operator, allowing for seamless
 integration with GitOps tools
