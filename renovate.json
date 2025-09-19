@@ -1,11 +1,19 @@
 {
-  "baseBranches": ["main"],
+  "baseBranches": [
+    "main"
+  ],
   "configWarningReuseIssue": false,
   "dependencyDashboard": true,
   "dependencyDashboardTitle": "Renovate: Upgrade Prometheus Operator CRDs Package Dependencies",
   "draftPR": true,
-  "enabledManagers": ["helm-values", "custom.regex", "helmv3"],
-  "ignorePaths": ["chart/charts/**"],
+  "enabledManagers": [
+    "helm-values",
+    "custom.regex",
+    "helmv3"
+  ],
+  "ignorePaths": [
+    "chart/charts/**"
+  ],
   "labels": [
     "prometheusOperatorCRDs",
     "renovate",
@@ -15,14 +23,21 @@
   "packageRules": [
     {
       "groupName": "Ironbank",
-      "matchDatasources": ["docker", "helm"],
+      "matchDatasources": [
+        "docker",
+        "helm"
+      ],
       "postUpgradeTasks": {
         "commands": [
           "regenerate-helm-docs",
           "bump-changelog '- {{{replace 'registry1.dso.mil/' '' depName}}} updated from {{{currentVersion}}} to {{{newVersion}}}'"
         ],
         "executionMode": "update",
-        "fileFilters": ["chart/Chart.yaml", "README.md", "CHANGELOG.md"]
+        "fileFilters": [
+          "chart/Chart.yaml",
+          "README.md",
+          "CHANGELOG.md"
+        ]
       }
     }
   ],
@@ -30,7 +45,9 @@
     {
       "customType": "regex",
       "description": "Update appVersion to match latest IB prometheus-operator image",
-      "fileMatch": ["^chart/Chart\\.yaml$"],
+      "managerFilePatterns": [
+        "/^chart/Chart\\.yaml$/"
+      ],
       "matchStrings": [
         "appVersion:\\s+(?<currentValue>.+)"
       ],
@@ -40,8 +57,12 @@
     {
       "customType": "regex",
       "description": "Update chart version",
-      "fileMatch": ["^chart/Chart\\.yaml$"],
-      "matchStrings": ["version:\\s+(?<currentValue>.+)-bb\\.\\d+"],
+      "managerFilePatterns": [
+        "/^chart/Chart\\.yaml$/"
+      ],
+      "matchStrings": [
+        "version:\\s+(?<currentValue>.+)-bb\\.\\d+"
+      ],
       "autoReplaceStringTemplate": "version: {{newValue}}-bb.0",
       "depNameTemplate": "prometheus-operator-crds",
       "datasourceTemplate": "helm",
@@ -49,5 +70,7 @@
     }
   ],
   "separateMajorMinor": false,
-  "postUpdateOptions": ["helmUpdateSubChartArchives"]
+  "postUpdateOptions": [
+    "helmUpdateSubChartArchives"
+  ]
 }
