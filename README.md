@@ -1,7 +1,7 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # prometheus-operator-crds
 
-![Version: 23.0.0-bb.0](https://img.shields.io/badge/Version-23.0.0--bb.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.85.0](https://img.shields.io/badge/AppVersion-v0.85.0-informational?style=flat-square) ![Maintenance Track: bb_sandbox](https://img.shields.io/badge/Maintenance_Track-bb_sandbox-red?style=flat-square)
+![Version: 24.0.0-bb.0](https://img.shields.io/badge/Version-24.0.0--bb.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.86.0](https://img.shields.io/badge/AppVersion-v0.86.0-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
 
 A Helm chart that collects custom resource definitions (CRDs) from the Prometheus Operator, allowing for seamless
 integration with GitOps tools
@@ -51,17 +51,7 @@ helm install prometheus-operator-crds chart/
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| upstream.crds.annotations | object | `{}` |  |
-| upstream.crds.alertmanagerconfigs.enabled | bool | `true` |  |
-| upstream.crds.alertmanagers.enabled | bool | `true` |  |
-| upstream.crds.podmonitors.enabled | bool | `true` |  |
-| upstream.crds.probes.enabled | bool | `true` |  |
-| upstream.crds.prometheusagents.enabled | bool | `true` |  |
-| upstream.crds.prometheuses.enabled | bool | `true` |  |
-| upstream.crds.prometheusrules.enabled | bool | `true` |  |
-| upstream.crds.scrapeconfigs.enabled | bool | `true` |  |
-| upstream.crds.servicemonitors.enabled | bool | `true` |  |
-| upstream.crds.thanosrulers.enabled | bool | `true` |  |
+| upstream | object | Upstream chart values | Values to pass to [the upstream prometheus-operator-crds chart](https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-operator-crds/values.yaml) |
 
 ## Contributing
 
